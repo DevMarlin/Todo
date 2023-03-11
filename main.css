@@ -103,8 +103,6 @@ h4 {
     cursor: pointer;
 }
 
-.create-todo .options label
-
 input[type="radio"],
 input[type="checkbox"] {
     display: none;
@@ -136,6 +134,7 @@ input:checked ~ .bubble::after {
     width: 10px;
     height: 10px;
     opacity: 1;
+    transition: 0.2s ease-in-out;
 }
 
 .create-todo .option label div {
