@@ -149,7 +149,6 @@ input:checked ~ .bubble::after {
     font-size: 1.125rem;
     padding: 1rem 1.5rem;
     color: var(--dark);
-    background-color: var(--primary);
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     background-color: var(--item-clr);
@@ -158,7 +157,7 @@ input:checked ~ .bubble::after {
 }
 
 .create-todo input[type="submit"]:hover {
-    opacity: 0.75;
+    background-color: #f8f8f8;
 }
 
 .todo-list .list {
