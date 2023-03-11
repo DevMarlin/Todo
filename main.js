@@ -114,3 +114,26 @@ function DisplayTodos () {
         })
     })
 }
+
+function changeLabelStyle(radioElement) {
+    const rootStyles = getComputedStyle(document.documentElement);
+
+    label_1 = document.getElementById("label_category1");
+    label_2 = document.getElementById("label_category2");
+
+    label_1.style.background = rootStyles.getPropertyValue('--item-clr');
+    label_1.style.color = rootStyles.getPropertyValue('--dark');
+    label_2.style.background = rootStyles.getPropertyValue('--item-clr');
+    label_2.style.color = rootStyles.getPropertyValue('--dark');
+
+    element = document.getElementById("label_" + radioElement.id);
+
+    if (radioElement.id === "category1") {
+        element.style.background = rootStyles.getPropertyValue('--business');
+    } else {
+        element.style.background = rootStyles.getPropertyValue('--personal');
+    }
+
+    element.style.color = rootStyles.getPropertyValue('--item-clr');
+
+}
