@@ -101,6 +101,7 @@ h4 {
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     cursor: pointer;
+    transition: 0.1s ease-in-out;
 }
 
 input[type="radio"],
