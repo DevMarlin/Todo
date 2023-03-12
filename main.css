@@ -18,15 +18,17 @@
     --item-clr: #1d1d1d;
     --text-color: white;
     --background: #161616;
+    
     --hover: #363636;
-
     --danger: #e25d5d;
-    --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-    --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+    
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     --primary: #c75de2;
+
     --personal: #35b48e;
     --business: #4ab0cf;
+    --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+    --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 }
 
 .themeSwitcher:checked ~ #app {
@@ -55,6 +57,7 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 body {
     background: var(--background);
     color: var(--text-color);
+    transition: 0.2s ease-in-out;
 }
 
 section {
@@ -252,10 +255,12 @@ input:checked ~ .bubble::after {
     transition: 0.2s ease-in-out;
 }
 
-.themeSwitch img {
+.themeSwitch {
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
+}
+.themeSwitch img {
     width: 50px;
     background-color: var(#FFF);
     border-radius: 10%;

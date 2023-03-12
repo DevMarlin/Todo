@@ -19,7 +19,10 @@
                 What's up, <input type="text" id="name" placeholder="Name here">
             </h2>
         </section>
-        <button class="themeSwitch" > <img src="/assets/darkTheme.png"></button>
+
+        <button class="themeSwitch" onclick="switchTheme(this)" data-theme="dark">
+            <img src="/assets/darkTheme.png" id="themeIcon">
+        </button>
         
             <section class="create-todo">
                 <h3>Create a to-do</h3>

@@ -135,5 +135,45 @@ function changeLabelStyle(radioElement) {
     }
 
     element.style.color = rootStyles.getPropertyValue('--item-clr');
+}
 
+function switchTheme(button) {
+    const root = document.documentElement
+    if (button.dataset.theme === "dark") {
+        theme = "light";
+
+        root.style.setProperty('--grey', '#888');
+        root.style.setProperty('--item-clr', '#fff');
+        root.style.setProperty('--text-color', '#313154');
+        root.style.setProperty('--background', '#eee');
+        root.style.setProperty('--hover', '#363636');
+        root.style.setProperty('--danger', '#e25d5d');
+        root.style.setProperty('--shadow', '0 1px 3px rgba(0, 0, 0, 0.1)');
+        root.style.setProperty('--primary', '#c75de2');
+        root.style.setProperty('--personal', '#35b48e');
+        root.style.setProperty('--business', '#4ab0cf');
+        root.style.setProperty('--business-glow', '0px 0px 4px rgba(58, 130, 238, 0.75)');
+        root.style.setProperty('--personal-glow', '0px 0px 4px rgba(234, 64, 164, 0.75)');
+ 
+        document.getElementById('themeIcon').src = '/assets/LightTheme.png';
+    } else {
+        theme ="dark";
+
+        root.style.setProperty('--grey', '#cacaca');
+        root.style.setProperty('--item-clr', '#1d1d1d');
+        root.style.setProperty('--text-color', '#fff');
+        root.style.setProperty('--background', '#161616');
+        root.style.setProperty('--hover', '#363636');
+        root.style.setProperty('--danger', '#e25d5d');
+        root.style.setProperty('--shadow', '0 1px 3px rgba(0, 0, 0, 0.1)');
+        root.style.setProperty('--primary', '#c75de2');
+        root.style.setProperty('--personal', '#35b48e');
+        root.style.setProperty('--business', '#4ab0cf');
+        root.style.setProperty('--business-glow', '0px 0px 4px rgba(58, 130, 238, 0.75)');
+        root.style.setProperty('--personal-glow', '0px 0px 4px rgba(234, 64, 164, 0.75)');
+
+        document.getElementById('themeIcon').src = '/assets/darkTheme.png';
+    }
+
+    button.dataset.theme = theme;
 }
